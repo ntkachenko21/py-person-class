@@ -13,7 +13,6 @@ def create_person_list(people_data: list) -> list:
     for data in people_data:
         name = data["name"]
         age = data["age"]
-
         person = Person(name, age)
         users_list.append(person)
 
@@ -24,4 +23,5 @@ def create_person_list(people_data: list) -> list:
             person.wife = Person.people.get(data["wife"])
         if "husband" in data and data["husband"] is not None:
             person.husband = Person.people.get(data["husband"])
+
     return users_list
